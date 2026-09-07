@@ -1,0 +1,14 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Local tooling output
+.codex/local/
+.codex/cache/
+.DS_Store
+Thumbs.db
+

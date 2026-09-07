@@ -1,0 +1,59 @@
+name: Validate Codex team system
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  structure:
+    name: Validate shared team configuration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify required files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s AGENTS.md
+          test -s PROJECT_PROFILE.md
+          test -s README.md
+          test -s .codex/config.toml
+          test -d .codex/agents
+          test -s docs/chatflows/chat-routing.md
+          test -s docs/automation/issue-intake.md
+          test -s .github/ISSUE_TEMPLATE/idea.yml
+          test -s .github/pull_request_template.md
+
+      - name: Verify custom agents
+        shell: bash
+        run: |
+          set -euo pipefail
+          count=$(find .codex/agents -maxdepth 1 -type f -name '*.toml' | wc -l)
+          test "$count" -ge 6
+          for required in orchestrator product-planner architect implementer data-integrator qa security-reviewer release; do
+            test -s ".codex/agents/${required}.toml"
+          done
+
+      - name: Enforce Codex-only project instructions
+        shell: bash
+        run: |
+          set -euo pipefail
+          if find . -type f -name 'CLAUDE.md' -not -path './.git/*' | grep -q .; then
+            echo 'CLAUDE.md is not part of this project. Use AGENTS.md.'
+            exit 1
+          fi
+
+      - name: Check issue workflow contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q 'ready-for-build' docs/automation/issue-intake.md
+          grep -q 'create_issue_draft' docs/automation/issue-intake.md
+

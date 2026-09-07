@@ -1,0 +1,74 @@
+name: Ny idé
+description: Fånga en idé som ett komplett draft Issue för vidare discovery.
+title: "[IDEA] "
+labels:
+  - draft
+  - needs-discovery
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Beskriv idén med vardagliga ord. Codex kompletterar teknisk struktur och markerar öppna frågor.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem och användarvärde
+      description: Vilket problem ska lösas och varför spelar det roll?
+      placeholder: Som användare vill jag ... så att ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: Önskat resultat
+      description: Hur ser en lyckad lösning ut för användaren?
+    validations:
+      required: true
+
+  - type: textarea
+    id: users
+    attributes:
+      label: Målgrupp och användningsfall
+      description: Vem använder detta och i vilken situation?
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Kända acceptanskriterier
+      description: Vad måste vara sant för att vi ska kalla detta klart?
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Begränsningar och beroenden
+      description: Teknik, budget, tid, integrationer eller andra krav.
+
+  - type: textarea
+    id: data-security
+    attributes:
+      label: Data, privacy och säkerhet
+      description: Kan detta hantera personuppgifter, CV:n, ljud eller annan känslig data?
+
+  - type: textarea
+    id: open-questions
+    attributes:
+      label: Öppna frågor och antaganden
+      description: Skriv det som Codex ska hjälpa till att reda ut.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Preliminär prioritet
+      options:
+        - Oklart
+        - Låg
+        - Medel
+        - Hög
+    validations:
+      required: true
+
