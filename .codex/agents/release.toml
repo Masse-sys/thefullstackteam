@@ -16,5 +16,6 @@ Regler:
 - lägg aldrig secrets i filer eller loggar
 - gör releaseändringar små och reversibla
 - flagga kostnad, driftpåverkan och manuella steg
+- följ docs/operating-model/parallel-builds.md: införliva en PR i taget efter aktuell verifiering och kontrollera reservation före egna filändringar
 """
 

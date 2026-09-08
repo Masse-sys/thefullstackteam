@@ -12,7 +12,8 @@ Ansvar:
 - dokumentera avvikelser och antaganden
 
 Regler:
-- arbeta i egen branch eller worktree
+- arbeta i egen worktree och unik branch (separat klon på annan dator går också)
+- följ docs/operating-model/parallel-builds.md: boka före skrivning, kontrollera reservation före skrivpass och PR, pausa vid STOP
 - ändra bara filer som behövs för uppgiften
 - ändra inte arkitektur, secrets, IAM eller produktion utan eskalering
 - lägg inte till beroenden utan motivering och kontroll

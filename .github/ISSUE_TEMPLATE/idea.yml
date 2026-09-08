@@ -72,3 +72,9 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: build-coordination
+    attributes:
+      label: Byggansvar och reservation (Codex kompletterar)
+      description: Ansvarig person, huvudagent/bygguppgift, branch, skrivområden, delade resurser och beroenden. Reservation krävs före skrivning.
+

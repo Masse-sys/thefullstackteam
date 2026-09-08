@@ -17,6 +17,12 @@ När användaren beskriver en ny idé ska Product Planner:
 
 När användaren godkänner scope får Issue:t `ready-for-build`. Den etiketten är den enda normala signalen för att byggflödet får starta.
 
+`ready-for-build` betyder godkänt scope, inte att uppgiften är reserverad.
+Före skrivning krävs bekräftad reservation enligt
+[parallellt byggarbete](../operating-model/parallel-builds.md). Issue:t ska ange
+ansvarig person, huvudagent/bygguppgift, unik branch, skrivområden, resurser och
+beroenden. Absoluta lokala sökvägar med personuppgifter ska inte publiceras.
+
 ## Issue-innehåll
 
 Varje Issue ska, när informationen finns, innehålla:

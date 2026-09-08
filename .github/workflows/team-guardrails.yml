@@ -17,6 +17,20 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install validation dependency
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Parse configuration and verify coordination contract
+        run: python tools/validate_team.py
+
+      - name: Test concurrent reservations with real Git processes
+        run: python -m unittest discover -s tests -v
+
       - name: Verify required files
         shell: bash
         run: |

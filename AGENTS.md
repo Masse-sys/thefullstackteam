@@ -81,6 +81,18 @@ En uppgift är klar när:
 - Pull Request har begriplig sammanfattning
 - öppna risker och mänskliga beslut är tydligt markerade
 
-## Delegation
+## Reservation vid parallellt byggarbete
+
+Följ [parallellt byggarbete](docs/operating-model/parallel-builds.md).
+Varje bygguppgift måste före skrivning ha egen worktree och unik branch samt
+en bekräftad reservation från `tools/coordinate.py` i repots gemensamma journal.
+På annan dator får en separat klon användas med unik branch. Kontrollera aktiv
+reservation och scope före skrivpass och PR. Vid STOP eller nätverksfel pausas
+berört skrivarbete. En etikett eller ledig chatt ersätter inte reservationen.
+Reservera både filer och delade resurser. Ingen automatisk timeout/övertagning.
+Behåll reservationen genom granskning och rättningar; släpp när arbetet avslutas.
+Alla byggagenter ska använda samma journal, inte en per person.
+
+## Delegation av deluppgifter
 
 Använd subagents för parallell, avgränsad och huvudsakligen läsintensiv analys. Ge varje agent ett konkret uppdrag, tillåtna filer, förväntat resultat och rapportformat. Vänta in resultat innan en skrivagent integrerar ändringar.

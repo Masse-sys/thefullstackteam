@@ -30,7 +30,8 @@ Tekniska alternativ, kontrakt, risker och ADR:er.
 
 ### `Build – Issue #N`
 
-En konkret byggchatt per Issue. Här arbetar Codex och dess agenter i branch eller worktree.
+En konkret byggchatt per Issue. Här arbetar Codex och dess agenter i egen worktree
+och unik branch, med bekräftad [reservation](../operating-model/parallel-builds.md).
 
 ### `Review – PR #N`
 

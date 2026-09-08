@@ -15,6 +15,9 @@ Det här repot är inte en produktapplikation. Det är den återanvändbara arbe
 
 ## Börja här
 
+För kollegor: [Kom igång med teamet](docs/operating-model/colleague-start.md).
+För byggagenter: [Reservation och parallellt arbete](docs/operating-model/parallel-builds.md).
+
 1. Läs [`AGENTS.md`](AGENTS.md) för teamets gemensamma regler.
 2. Läs [`PROJECT_PROFILE.md`](PROJECT_PROFILE.md) för projektets uppdrag.
 3. Läs [`docs/chatflows/chat-routing.md`](docs/chatflows/chat-routing.md) för Codex-projektets chatt- och arbetsmodell.
