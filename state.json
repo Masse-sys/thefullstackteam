@@ -1,1 +1,1 @@
-{"claims": [], "version": 1}
+{"claims": [{"base": "f47fc5eb2bfcd39c64a2231773ed7f40de8c9e46", "branch": "codex/knowit-onboarding", "id": "c5fe64550fe74240a7574451e6fbab41", "issue": 3, "owner": "Masse-sys", "paths": ["agents.md", "deliverables", "docs/operating-model", "plan.md"], "resources": [], "session": "knowit-onboarding-20260908", "workspace": "28b91721047f392dbb7fba113608bec7bfcbac65a731362c44146e148b3c8a30"}], "version": 1}
