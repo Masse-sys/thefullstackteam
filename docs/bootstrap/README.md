@@ -47,7 +47,15 @@ Issue-skapandet får vara automatiskt. Byggstart, merge och produktion ska ha se
 
 - [ ] GitHub-anslutning för Issue-skapande är aktiv
 - [ ] Codex Cloud når repot
-- [ ] `main` är skyddad
+- [x] `main` är skyddad (PR, aktuell obligatorisk CI, ingen admin-bypass, force-push eller radering; verifierat 2026-09-08)
 - [ ] första automatiska Code Review är verifierad
-- [ ] första draft Issue är skapad och komplett
+- [x] första draft Issue är skapad och komplett (#1, därefter beställt för genomförande)
 - [ ] första byggchatt har körts i worktree
+
+## Samordning och kollegor
+
+[Parallellt byggarbete](../operating-model/parallel-builds.md),
+[pilotresultat](../operating-model/pilot-results.md) och
+[kollegans start](../operating-model/colleague-start.md) beskriver införandet.
+Oberoende obligatorisk granskare är inte aktiverad ännu: en andra behörig
+granskare behöver utses. Varje produktrepo behöver egna skydd och kontroller.

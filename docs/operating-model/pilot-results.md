@@ -50,4 +50,18 @@ ligger kvar och kräver kontrollerad återhämtning. Delade resurser mellan repo
 och oberoende mänsklig granskare måste fortfarande konfigureras.
 
 Main-skydden är sparade: PR, obligatorisk aktuell kontroll, ingen bypass,
-ingen force-push eller radering. PR-provet och slutlig CI dokumenteras i PR:en.
+ingen force-push eller radering.
+
+## Negativt PR-prov mot GitHub
+
+På PR #2 lades ett avsiktligt underkänt test i en separat provcommit
+`09fc5feed1dacf8c9fda6949ef8d14cca2a6ee90`. GitHub körde den obligatoriska
+kontrollen och rapporterade failure:
+[körning 34224912704](https://github.com/Masse-sys/thefullstackteam/actions/runs/34224912704).
+PR-sidan visade kontrollen som Required och knappen Merge pull request som
+inaktiverad, även för repots ägare. Detta observerades före rättningen.
+
+Provfilen är därefter borttagen. Slutlig CI kontrolleras på den nya committen
+och redovisas i [PR #2](https://github.com/Masse-sys/thefullstackteam/pull/2).
+De tolv ordinarie lokala integrationstesterna och konfigurationskontrollen
+passerade före provfilen lades till.
