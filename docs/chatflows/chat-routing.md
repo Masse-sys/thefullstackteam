@@ -14,46 +14,52 @@ Codex ska:
 
 ## Chattkarta
 
-### `00 – Control Room`
+Alla dessa är chattar i samma Codex-projekt när arbetet gäller teamets operativsystem eller samma produktrepo. Skapa bara de chattar som behövs.
 
-Huvudchatten för målbild, prioritering, coachning, beslut och koordinering.
+### Setup-chatt
 
-### `01 – Discovery`
+Den aktuella chatten för att färdigställa teamets operativsystem. Den behöver inte ersättas av en särskild Control Room.
+
+### `Discovery – [ämne]`
 
 Nya idéer, användarproblem, research, konkurrensbild och avgränsning.
 
-### `02 – Architecture`
+### `Architecture – [ämne eller Issue]`
 
 Tekniska alternativ, kontrakt, risker och ADR:er.
 
-### `03 – Build – Issue #N`
+### `Build – Issue #N`
 
-En konkret byggchatt per Issue. Här arbetar Codex och dess agenter i branch/worktree.
+En konkret byggchatt per Issue. Här arbetar Codex och dess agenter i branch eller worktree.
 
-### `04 – Review – PR #N`
+### `Review – PR #N`
 
 Testluckor, säkerhet, diffgranskning och uppföljning.
 
-### `05 – Release`
+### `Release – [version eller mål]`
 
 Releaseunderlag, changelog, deploymentplan och rollback.
 
-### `06 – Retrospective`
+### `Retrospective – [period eller leverans]`
 
 Lärdomar som ska förbättra instruktioner, skills, mallar eller CI.
 
+### Valfri `Control Room`
+
+En samordningschatt kan skapas senare om många parallella arbetsströmmar gör det svårt att se nästa steg. Den är inte ett krav och ska inte skapas som ett separat lokalt projekt.
+
 ## Routingregler
 
-- Ny idé → Discovery eller Control Room.
+- Ny idé → skapa en `Discovery – [ämne]`-chatt i rätt Codex-projekt.
 - Ny idé som är tillräckligt tydlig → skapa Issue-utkast.
-- Godkänt scope → starta Codex Build-chatt.
-- Kod, tester, branch eller Pull Request → Codex.
-- Produktbeslut, prioritering eller osäker målbild → Control Room.
+- Godkänt scope → starta `Build – Issue #N` i samma projekt som äger kodbasen.
+- Kod, tester, branch eller Pull Request → Codex i lämplig chatt och branch/worktree.
+- Produktbeslut, prioritering eller osäker målbild → Discovery- eller planeringschatt.
 - Fynd i review → Review-chatt och därefter samma Build-chatt för fix.
 
-## Viktig begränsning
+## Viktig kontextregel
 
-Projektinstruktioner kan göra routing konsekvent, men ChatGPT och Codex är separata arbetsytor. Den lokala Codex-projektmappen ska vara kopplad till repot och användas för all filändring. En ChatGPT-chatt ska inte antas ha tillgång till lokala filer om den inte körs i rätt lokal Codex-kontext.
+Projektet delar instruktioner, filer och annan ansluten kontext mellan sina chattar, men en ny chatt har inte automatiskt hela historiken från andra chattar. Därför ska viktiga beslut skrivas till repo-dokumentation, GitHub Issues, ADR:er eller Pull Requests. Den lokala Codex-projektmappen ska vara kopplad till rätt repo och användas för all filändring.
 
 ## Standardfraser
 
@@ -63,4 +69,3 @@ Projektinstruktioner kan göra routing konsekvent, men ChatGPT och Codex är sep
 - `Implementera Issue #N:` startar byggflödet.
 - `Granska PR #N:` startar QA- och säkerhetsgranskning.
 - `Förbered release:` tar fram releaseunderlag men stoppar före produktion.
-

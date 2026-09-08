@@ -18,10 +18,21 @@ All implementation och dokumentation skrivs av Codex eller delegerade Codex-agen
 8. Kör relevanta valideringar innan Pull Request.
 9. Sammanfatta ändringar, tester, kvarvarande risker och eventuella mänskliga beslut.
 
+## Projekt- och chattmodell
+
+- Detta repo används som ett lokalt Codex-projekt för teamets operativsystem.
+- Ett projekt motsvarar normalt ett repo eller en sammanhållen kodbas.
+- Flera chattar får och bör ligga i samma projekt när de behöver samma instruktioner, filer och beslutskontext.
+- Skapa inte ett nytt lokalt projekt bara för att skapa en ny chatt eller agentroll.
+- En ny idé, feature, felsökning eller review får en egen chatt i det projekt som äger arbetet.
+- Projektets filer, Issues, ADR:er och Pull Requests är den beständiga kontexten. En ny chatt ska inte förutsättas känna till hela historiken från andra chattar.
+
 ## Routing mellan chattar
 
-- Produktidé, research, prioritering och beslut hör hemma i Control Room eller Discovery.
-- Filändringar, tester, brancher och Pull Requests hör hemma i Codex.
+- Allt arbete kan utföras i Codex. Vanlig ChatGPT-chatt är valfri och krävs inte för detta team.
+- Produktidé, research, prioritering och beslut hör hemma i en Discovery- eller planeringschatt i rätt Codex-projekt.
+- Filändringar, tester, brancher och Pull Requests hör hemma i en bygg-, test- eller reviewchatt i rätt Codex-projekt.
+- En särskild Control Room-chatt är valfri och ska bara skapas om koordineringen annars blir svår att överblicka.
 - Arkitektur och ADR:er ska skrivas innan större implementationer.
 - Varje konkret feature ska ha en egen byggchatt och ett eget Issue.
 - Om information saknas för att bygga säkert: stanna och fråga användaren.
@@ -73,4 +84,3 @@ En uppgift är klar när:
 ## Delegation
 
 Använd subagents för parallell, avgränsad och huvudsakligen läsintensiv analys. Ge varje agent ett konkret uppdrag, tillåtna filer, förväntat resultat och rapportformat. Vänta in resultat innan en skrivagent integrerar ändringar.
-

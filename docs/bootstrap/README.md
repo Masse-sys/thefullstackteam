@@ -5,15 +5,18 @@ Teamets repo-grund är incheckad. Följande steg görs i Codex- och GitHub-grän
 ## Codex desktop
 
 - Lägg till den lokala projektmappen som ett lokalt Codex-projekt.
-- Välj Codex när chatten ska läsa eller ändra filer.
+- Använd Codex som teamets primära arbetsyta för både planering och implementation.
 - Kontrollera att projektet använder `.codex/agents/`.
 - Konfigurera lokal miljö och återanvändbara actions i Codex desktop.
 - Använd worktree för bakgrundsarbete och parallella uppgifter.
-- Använd `00 – Control Room` som huvudchatt för coachning och beslut.
+- Skapa nya arbetschattar inifrån samma Codex-projekt; skapa inte ett nytt lokalt projekt för varje chatt.
+- Använd en särskild Control Room endast om teamets koordinering senare kräver det.
 
-## ChatGPT-projekt
+## Projektgränser
 
-Skapa eller använd ett projekt för Control Room och lägg in routingtexten från [`docs/chatflows/chat-routing.md`](../chatflows/chat-routing.md) i projektinstruktionerna. Detta gör arbetssättet konsekvent mellan chattarna. När en uppgift kräver filändringar ska den startas i det lokala Codex-projektet.
+- `UTVECKLINGSTEAMS` är projektet för teamets operativsystem och ska inte innehålla produktkod.
+- Ett framtida produktrepo får ett eget lokalt Codex-projekt när det har en egen kodbas, mapp eller GitHub-repository.
+- Teamets arbetssätt ska då återanvändas genom produktrepots `AGENTS.md`, `PROJECT_PROFILE.md` och `.codex/`-konfiguration, inte genom att blanda flera repos i samma projekt.
 
 ## GitHub
 
@@ -30,7 +33,7 @@ Codex kan därefter arbeta från GitHub Issues och Pull Requests, och skriva til
 
 ## Issue-automation
 
-För att Control Room ska kunna skapa Issues direkt krävs en godkänd GitHub-anslutning med Issue-skrivbehörighet. Den bör exponera minsta möjliga operationer enligt [`docs/automation/issue-intake.md`](../automation/issue-intake.md).
+För att idéflödet ska kunna skapa Issues direkt krävs en godkänd GitHub-anslutning med Issue-skrivbehörighet. Den bör exponera minsta möjliga operationer enligt [`docs/automation/issue-intake.md`](../automation/issue-intake.md).
 
 Standard är:
 
@@ -48,4 +51,3 @@ Issue-skapandet får vara automatiskt. Byggstart, merge och produktion ska ha se
 - [ ] första automatiska Code Review är verifierad
 - [ ] första draft Issue är skapad och komplett
 - [ ] första byggchatt har körts i worktree
-
