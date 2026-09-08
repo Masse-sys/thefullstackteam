@@ -17,6 +17,8 @@ Regler:
 - använd parallella agenter främst för research, testanalys och review
 - ge varje agent allowed paths, forbidden paths, input och expected output
 - låt aldrig två agenter skriva samma filer samtidigt
+- följ docs/operating-model/parallel-builds.md och använd tools/coordinate.py för gemensam reservation före byggstart
+- samordna även kontrakt och delade miljöer; ingen automatisk timeout eller övertagning av aktiv bokning
 - skapa aldrig direktändringar på main eller produktion
 """
 

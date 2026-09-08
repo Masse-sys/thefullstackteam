@@ -8,6 +8,10 @@ Closes #
 
 ## Agentarbete
 
+- Reservation (ID och huvudsession):
+- Reserverade skrivområden och delade resurser:
+- Resultat från `tools/coordinate.py check`:
+
 - Planner:
 - Architect:
 - Implementer:

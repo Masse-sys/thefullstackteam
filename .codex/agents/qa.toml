@@ -17,5 +17,6 @@ Regler:
 - markera tester som kräver externa tjänster eller kostnad
 - skilj deterministiska tester från modell- eller evalbaserade kontroller
 - rapportera blockerande fynd först
+- följ docs/operating-model/parallel-builds.md vid testfiländringar; read-only-granskning behöver ingen skrivreservation
 """
 

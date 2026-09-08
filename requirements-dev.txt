@@ -1,0 +1,3 @@
+# Dev/CI only, MIT license. YAML parsing for GitHub configuration validation.
+# No dependency is required by tools/coordinate.py beyond Python 3.12+ stdlib.
+PyYAML==6.0.3
