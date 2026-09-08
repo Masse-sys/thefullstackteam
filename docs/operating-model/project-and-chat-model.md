@@ -41,9 +41,13 @@ Projektet delar projektfiler och instruktioner mellan sina chattar, men en ny ch
 
 ## Teamets rekommenderade struktur
 
-### Nu: färdigställ teamet
+### Börja med en idé
 
-Använd en enda aktuell setup-chatt i projektet `UTVECKLINGSTEAMS`. Den kan fortsätta heta `Sätt upp agnostiskt utvecklingsteam`.
+Öppna en ny chatt i det befintliga projektet **Utvecklingsteam** (teamrepot
+`UTVECKLINGSTEAMS`). Börja exempelvis med en chatt för transkribering och en
+annan för arbetsrätt-MCP. Codex använder teamets gemensamma instruktioner och
+skriver ned krav och beslut i filer och Issues. Skapa inte nya projekt eller
+produktmappar bara för att diskutera idéerna.
 
 En särskild `00 – Control Room` behövs inte nu. Den är bara en valfri koordineringschatt om antalet parallella arbetsströmmar senare gör nästa steg svårt att se.
 
@@ -59,9 +63,16 @@ När teamets egna dokument eller konfiguration ska ändras skapas fokuserade cha
 
 ### Framtida produktrepo
 
-När en produkt får en egen kodbas, mapp eller GitHub-repository får den ett eget Codex-projekt. Då kopieras eller genereras teamets återanvändbara arbetsmodell till produktrepo:t genom dess `AGENTS.md`, `PROJECT_PROFILE.md` och `.codex/`.
+Innan produktkod börjar byggas anger Codex målrepo och separat arbetsyta.
+Teamets återanvändbara arbetsmodell förbereds i produktrepo:t genom dess
+`AGENTS.md`, `PROJECT_PROFILE.md`, relevanta agentinstruktioner, reservationsverktyg
+och anpassade kontroller. Codex läser in dessa uttryckligen och överför länkar
+till Issue och beslut. Att en mapp skapas överför inte kontext automatiskt.
 
-Produktens discovery-, architecture-, build-, review- och releasechattar ligger sedan i produktens projekt.
+När kodbasen har ett eget Codex-projekt hör dess bygg- och reviewchattar hemma
+där. Idéstarten ligger kvar i Utvecklingsteam; användaren behöver inte skapa ett
+nytt projekt för varje idé eller chatt. Repoåtkomst och GitHub-skydd kontrolleras
+separat eftersom de inte följer med kopierade filer.
 
 ## Codex först
 

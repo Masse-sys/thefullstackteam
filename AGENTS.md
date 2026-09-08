@@ -29,6 +29,11 @@ All implementation och dokumentation skrivs av Codex eller delegerade Codex-agen
 
 ## Routing mellan chattar
 
+- Nya produktidéer börjar i varsin ny chatt i det befintliga projektet Utvecklingsteam.
+- Skapa inte ett nytt projekt för idéstart. Spara besluten i filer och Issues.
+- Innan produktkod byggs ska Codex ange målrepo/arbetsyta och läsa in teamets
+  instruktioner där. Produktkod ska inte placeras i teamets operativsystemsrepo.
+
 - Allt arbete kan utföras i Codex. Vanlig ChatGPT-chatt är valfri och krävs inte för detta team.
 - Produktidé, research, prioritering och beslut hör hemma i en Discovery- eller planeringschatt i rätt Codex-projekt.
 - Filändringar, tester, brancher och Pull Requests hör hemma i en bygg-, test- eller reviewchatt i rätt Codex-projekt.
@@ -48,6 +53,13 @@ All implementation och dokumentation skrivs av Codex eller delegerade Codex-agen
 - Release äger CI/CD- och releaseförberedelser, men får inte själv godkänna produktion.
 
 ## Hårda regler
+
+- Alla PowerPoint-presentationer skapas och redigeras med `knowit-ppt`-skillen
+  och dess officiella Knowit-mall. Läs SKILL.md, följ brandregler, använd dess
+  startskript för nya presentationer, kör audit och kontrollera renderade slides.
+  Leverera redigerbar PPTX. Om skill/mall saknas, ordna rätt källa och använd inte
+  en egen varumärkesapproximation. Avvik endast på uttrycklig användarbegäran.
+  Licensierade mallar och typsnitt ska inte publiceras i publika repos.
 
 - Skriv aldrig direkt till `main`.
 - Skapa aldrig en produktionsrelease utan mänskligt godkännande.
